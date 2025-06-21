@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Kyokyo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #a3b18a;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #588157;
+      padding: 2rem;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+    }
+    .message {
+      padding: 2rem;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 90%;
+      margin: 2rem auto;
+      background-color: #ccd5ae;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .slideshow-image {
+      width: 100%;
+      height: 500px;
+      object-fit: contain;
+      border-radius: 1rem;
+    }
+    .compliment-btn {
+      background-color: #588157;
+      border: none;
+      padding: 1rem 2rem;
+      color: white;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 2rem;
+    }
+    .compliment {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #264653;
+      min-height: 2rem;
+    }
+    .ending-note {
+      margin: 3rem auto;
+      padding: 2rem;
+      max-width: 700px;
+      background-color: #ccd5ae;
+      border-radius: 1rem;
+      box-shadow: 0 0 12px rgba(88, 129, 87, 0.5);
+      font-size: 1.2rem;
+      color: #344e41;
+    }
+    .ending-note h2 {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+    footer {
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>For Kyokyo</header>  <div class="message">
+    <p>Hey langga, I know that you are having a hard time seeing how beautiful you are. I hope this can make you feel better. I just want you to know that no matter what you think you see in the mirror, I see someone stunning, warmhearted, and one-of-a-kind. Beauty isn't only about appearance it's your laugh, your thoughts, your heart, your soul. You are beautiful in ways the world doesn't praise enough. Please don't forget that.
+
+        I chose these images, not because to make fun of you, but I genuinely find you beautiful in these images because I see YOU, kyokyo. The sweet loving girl I love. You mean the world to me langga I love youuu!!!
+    </p>
+  </div>  <div class="slideshow-container">
+    <img class="slideshow-image" id="slideshow" src="https://i.postimg.cc/hJZQ82KX/Messenger-creation-8-A1-BDA61-C28-C-49-DE-82-C8-49438-B7-EA816.jpg" alt="Kyokyo slideshow">
+  </div><button class="compliment-btn" onclick="showCompliment()">Remind me again?</button>
+
+  <div class="compliment" id="compliment"></div>  <div class="ending-note">
+    <p>Before you go, just remember...</p>
+    <h2>It’s not what’s on the outside that counts. It’s the inside that truly matters.</h2>
+    <p>Your kindness, your warmth, and your heart make you the most beautiful of all.</p>
+  </div>  <footer>Made with love by Ryu 💖</footer>  <script>
+    const compliments = [
+      "You’re not just beautiful, you’re breathtaking.",
+      "You’re the kind of pretty that makes flowers jealous.",
+      "Even on your worst days, you shine.",
+      "Your smile could light up the darkest room.",
+      "You’re art in human form.",
+      "You’re the kind of pretty I’ll never get used to.",
+      "You’re prettier than a perfect sunset.",
+      "You were made to be admired.",
+      "You're my kind of woman",
+      "Everyone adores you, atleast I do!!",
+      'You are the most beautiful thing that I have ever seen'
+
+    ];
+
+    function showCompliment() {
+      const rand = Math.floor(Math.random() * compliments.length);
+      document.getElementById('compliment').textContent = compliments[rand];
+    }
+
+    const images = [
+      "https://i.postimg.cc/hJZQ82KX/Messenger-creation-8-A1-BDA61-C28-C-49-DE-82-C8-49438-B7-EA816.jpg",
+      "https://i.postimg.cc/nshQQyf8/Messenger-creation-D21-A653-C-F849-4727-BF1-E-8-A3-F586-EE8-E8.jpg",
+      "https://i.postimg.cc/CBZBcbKm/Messenger-creation-E242-D9-B4-3-BE2-4087-811-B-709-D89-A620-C4.jpg",
+      "https://i.postimg.cc/y3cJHBcR/Messenger-creation-EB1800-B7-AF2-B-4266-BE4-E-AA6-DE081-D16-C.jpg",
+      "https://i.postimg.cc/vgpJnwj3/Messenger-creation-EEEBE337-4710-4-F99-B958-F28-C4894-F975.jpg"
+    ];
+
+    let currentIndex = 0;
+    const slideshow = document.getElementById("slideshow");
+
+    function changeSlide() {
+      currentIndex = (currentIndex + 1) % images.length;
+      slideshow.src = images[currentIndex];
+    }
+
+    setInterval(changeSlide, 3000); // Change every 3 seconds
+  </script></body>
+</html>
